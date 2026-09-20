@@ -1,0 +1,85 @@
+{
+  "format_version": 1,
+  "compression": "gzip",
+  "files": [
+    {
+      "path": "data/raw/trialsV2.csv",
+      "parts": [
+        {
+          "path": "trialsV2.csv.gz"
+        }
+      ]
+    },
+    {
+      "path": "data/processed/formattedData.csv",
+      "parts": [
+        {
+          "path": "formattedData.csv.gz"
+        }
+      ]
+    },
+    {
+      "path": "data/literature/morehead_raw/data_MultiSizeClamp_1237.mat",
+      "parts": [
+        {
+          "path": "data_MultiSizeClamp_1237.mat.gz.part001"
+        },
+        {
+          "path": "data_MultiSizeClamp_1237.mat.gz.part002"
+        },
+        {
+          "path": "data_MultiSizeClamp_1237.mat.gz.part003"
+        },
+        {
+          "path": "data_MultiSizeClamp_1237.mat.gz.part004"
+        },
+        {
+          "path": "data_MultiSizeClamp_1237.mat.gz.part005"
+        }
+      ]
+    },
+    {
+      "path": "data/literature/morehead_raw/data_MultiSizeClamp_15304560.mat",
+      "parts": [
+        {
+          "path": "data_MultiSizeClamp_15304560.mat.gz.part001"
+        },
+        {
+          "path": "data_MultiSizeClamp_15304560.mat.gz.part002"
+        },
+        {
+          "path": "data_MultiSizeClamp_15304560.mat.gz.part003"
+        },
+        {
+          "path": "data_MultiSizeClamp_15304560.mat.gz.part004"
+        },
+        {
+          "path": "data_MultiSizeClamp_15304560.mat.gz.part005"
+        },
+        {
+          "path": "data_MultiSizeClamp_15304560.mat.gz.part006"
+        }
+      ]
+    },
+    {
+      "path": "data/literature/morehead_raw/data_MultiSizeClamp_7080100110.mat",
+      "parts": [
+        {
+          "path": "data_MultiSizeClamp_7080100110.mat.gz.part001"
+        },
+        {
+          "path": "data_MultiSizeClamp_7080100110.mat.gz.part002"
+        },
+        {
+          "path": "data_MultiSizeClamp_7080100110.mat.gz.part003"
+        },
+        {
+          "path": "data_MultiSizeClamp_7080100110.mat.gz.part004"
+        },
+        {
+          "path": "data_MultiSizeClamp_7080100110.mat.gz.part005"
+        }
+      ]
+    }
+  ]
+}

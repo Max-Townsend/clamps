@@ -1,0 +1,13 @@
+# paper_requested_seven_row manuscript stats
+
+Inferential model-term tests below are participant-clustered Wald chi-square tests from linear models fit to the per-subject summary tables. The eta-squared intervals are participant-level bootstrap confidence intervals for the same model terms.
+
+- Late adaptation varied strongly with clamp magnitude (Wald chi2(39) = 360.30, p < .001, eta_p^2 = 0.159 [0.134, 0.231]). The device gap changed across clamp magnitudes (Wald chi2(39) = 67.70, p = .003, eta_p^2 = 0.029 [0.029, 0.069]). Holm-corrected one-sample tests against zero were significant at 29/40 clamps: 2, 3, 4, 5, 6, 7, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 120 deg.
+- Early single-trial learning depended on clamp magnitude (Wald chi2(39) = 80.81, p < .001, eta_p^2 = 0.027 [0.027, 0.070]), whereas washout single-trial learning also varied with clamp magnitude (Wald chi2(39) = 75.46, p < .001, eta_p^2 = 0.035 [0.034, 0.080]). Only the 80 deg clamp survived Holm correction in early STL; no washout clamp did.
+- In the peak range, late adaptation exceeded baseline by 27.49 deg on average (t(98) = 12.45, p < .001, cohens_dz = 1.25 [0.87, 1.77]). In the high-error range, the phase difference was negligible (0.30 deg; t(96) = 0.27, p = .789, cohens_dz = 0.03 [-0.17, 0.24]).
+- Spatial baseline bias showed a strong pointer-by-target interaction (Wald chi2(3) = 117.92, p < .001, eta_p^2 = 0.054 [0.036, 0.077]). Mouse means were uniformly negative (-4.86 to -3.59 deg), whereas trackpad means ranged from -6.16 to 6.99 deg across the four targets.
+- Within the 135 to 170 deg clamps, late adaptation depended on baseline-bias sign after adjusting for clamp and pointer (Wald chi2(2) = 33.18, p < .001, eta_p^2 = 0.165 [0.073, 0.290]). Relative to the near-zero group, the incorrect-sign group was -6.38 deg lower and the correct-sign group was 7.62 deg higher.
+- The high-error trajectory panel showed a robust window-by-bias-sign interaction (Wald chi2(6) = 155.51, p < .001, eta_p^2 = 0.098 [0.077, 0.135]), so the sign-group separation was not confined to a single time window.
+- Early STL variability showed a pointer effect in the full clamp-by-device model (Wald chi2(1) = 5.01, p = .025, eta_p^2 = 0.001 [0.000, 0.015]), with a near-significant interaction trend (p = .061). Late adaptation variability was higher for mouse than trackpad in the additive model (Wald chi2(1) = 9.57, p = .002, eta_p^2 = 0.015 [0.002, 0.038]).
+
+The CSV tables written beside this summary contain the full per-clamp descriptives, effect sizes, confidence intervals, and participant-clustered Wald term tests for the clamp-level analyses.

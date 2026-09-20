@@ -1,0 +1,6 @@
+scope,parameter,mean,sd,fixed,datasetSlug,datasetLabel
+device_specific,senseVar,2254.340386968759,0.0,False,mouse,Mouse
+device_specific,senseVar,1330.959952475392,0.0,False,trackpad,Trackpad
+shared,c,0.21826760066854184,0.0,False,,Shared
+shared,retention,0.9658693357038292,0.0,False,,Shared
+shared,lr,1.0,0.0,False,,Shared

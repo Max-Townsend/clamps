@@ -1,0 +1,28 @@
+{
+  "model": "MeanTimeseriesCausalInf",
+  "objectiveName": "negll",
+  "fitObjective": 77106.96451113939,
+  "negLogLik": 77106.96451113939,
+  "rmse": 8.903505341964365,
+  "n_summary_rows": 20800,
+  "n_params_total": 5,
+  "n_population_params": 5,
+  "fitMode": "shared_point",
+  "fixedParamNames": [
+    "senseVar_mouse",
+    "senseVar_trackpad",
+    "c",
+    "retention",
+    "lr"
+  ],
+  "jointDeviceFit": true,
+  "deviceSlugs": [
+    "mouse",
+    "trackpad"
+  ],
+  "AIC": 154223.92902227878,
+  "BIC": 154263.64256360722,
+  "runLabel": "Mouse + Trackpad joint: Causal inference (joint device, shared dynamics)",
+  "fixedParameters": "{\"deviceSpecific\": [\"senseVar\"], \"shared\": [\"c\", \"retention\", \"lr\"]}",
+  "outputDir": "meanTimeseriesFits\\mean_timeseries_shared_point_joint_device_motorvar\\joint_devices\\MeanTimeseriesCausalInf"
+}

@@ -1,0 +1,35 @@
+{
+  "model": "MeanTimeseriesVectorBCC",
+  "objectiveName": "negll",
+  "fitObjective": 67922.02076589825,
+  "negLogLik": 67922.02076589825,
+  "rmse": 7.060006040008315,
+  "n_summary_rows": 20800,
+  "n_params_total": 5,
+  "n_population_params": 5,
+  "fitMode": "shared_point",
+  "fixedParamNames": [
+    "propVar_mouse",
+    "propVar_trackpad",
+    "visVarSlope",
+    "retention",
+    "lr"
+  ],
+  "fixedParameterValues": {
+    "visVarInt": 1.853
+  },
+  "fixedMotorVarBySubset": {
+    "mouse": 81.42877507299032,
+    "trackpad": 43.75327994968318
+  },
+  "jointDeviceFit": true,
+  "deviceSlugs": [
+    "mouse",
+    "trackpad"
+  ],
+  "AIC": 135854.0415317965,
+  "BIC": 135893.75507312495,
+  "runLabel": "Mouse + Trackpad joint: Vector BCC (joint device, shared dynamics, calibrated motorVar)",
+  "fixedParameters": "{\"deviceSpecific\": [\"propVar\"], \"motorVar\": \"calibrated_no_feedback_by_device\", \"motorVarBySubset\": {\"mouse\": 81.42877507299032, \"trackpad\": 43.75327994968318}, \"shared\": [\"visVarSlope\", \"retention\", \"lr\"], \"visVarInt\": 1.853}",
+  "outputDir": "meanTimeseriesFits\\mean_timeseries_shared_point_joint_device_motorvar\\joint_devices\\MeanTimeseriesVectorBCC"
+}

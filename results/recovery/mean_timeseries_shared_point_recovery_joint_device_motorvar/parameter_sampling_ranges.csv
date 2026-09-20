@@ -1,0 +1,16 @@
+subsetSlug,subsetLabel,model,parameter,lowerBound,upperBound,fittedCenter,sampleLower,sampleUpper,sampleSpace,rangeMode
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,propVar_mouse,1e-06,1000.0,1000.0,250.0,1000.0,log,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,propVar_trackpad,1e-06,1000.0,681.3484088870764,170.3371022217691,1000.0,log,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,visVarSlope,0.0,1.0,0.4412303014632289,0.24123030146322888,0.6412303014632289,linear,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,retention,0.5,1.0,0.9781164434895512,0.9481164434895512,1.0,linear,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,lr,1e-06,1.0,0.1169258972038008,1e-06,0.3169256972038008,linear,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,senseVar_mouse,1e-06,10000.0,2254.340386968759,563.5850967421898,9017.361547875036,log,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,senseVar_trackpad,1e-06,10000.0,1330.959952475392,332.739988118848,5323.839809901568,log,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,c,1e-06,100.0,0.2182676006685418,0.05456690016713545,0.8730704026741672,log,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,retention,0.0,1.0,0.9658693357038292,0.9358693357038291,0.9958693357038292,linear,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,lr,0.0,1.0,1.0,0.8,1.0,linear,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,propVar_mouse,1e-06,1000.0,340.2161461624544,85.0540365406136,1000.0,log,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,propVar_trackpad,1e-06,1000.0,121.82691508802334,30.456728772005835,487.30766035209336,log,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,visVarSlope,0.0,1.0,0.1867866886814298,0.0,0.38678668868142985,linear,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,retention,0.5,1.0,0.983539585463393,0.953539585463393,1.0,linear,local
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,lr,1e-06,1.0,0.0813221299996562,1e-06,0.2813219299996562,linear,local

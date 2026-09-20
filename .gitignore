@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+results/validation_runs/
+
+# Full raw tracker data is distributed on request; see README.md.
+/data/raw/trackers.csv
+
+# Reconstructed from data/archives/ by the analysis commands or restore-data.
+/data/raw/trialsV2.csv
+/data/processed/formattedData.csv
+/data/literature/morehead_raw/data_MultiSizeClamp_1237.mat
+/data/literature/morehead_raw/data_MultiSizeClamp_15304560.mat
+/data/literature/morehead_raw/data_MultiSizeClamp_7080100110.mat
+/data/**/*.partial
+
+# Local analysis audits and development checks.
+/reference/
+/tests/
+/clamp_analysis/validation.py
+/clamp_analysis/_local_data_checks.py
+/docs/reproducibility.md
+/docs/*validation*.json
+/docs/*checksums*.json
+/docs/reference_verification.json
+/results/validation.json
+.ruff_cache/

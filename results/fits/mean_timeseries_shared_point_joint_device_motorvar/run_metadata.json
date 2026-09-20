@@ -1,0 +1,74 @@
+{
+  "seed": 42,
+  "nCores": 10,
+  "parallelism": "restart searches only; objective evaluations use one core",
+  "fitCollectionName": "mean_timeseries_shared_point_joint_device_motorvar",
+  "dataPath": "formattedData.csv",
+  "detailsPath": "detailsV2.csv",
+  "humanValueCol": "recentred_hand_angle",
+  "excludedConditions": [
+    "NoFeedbackBaseline"
+  ],
+  "fixedParameterSettings": {
+    "MeanTimeseriesBaseBCC": {
+      "visVarInt": 1.853,
+      "motorVar": "calibrated_no_feedback_by_device",
+      "shared": [
+        "visVarSlope",
+        "retention",
+        "lr"
+      ],
+      "deviceSpecific": [
+        "propVar"
+      ]
+    },
+    "MeanTimeseriesCausalInf": {
+      "shared": [
+        "c",
+        "retention",
+        "lr"
+      ],
+      "deviceSpecific": [
+        "senseVar"
+      ]
+    },
+    "MeanTimeseriesVectorBCC": {
+      "visVarInt": 1.853,
+      "motorVar": "calibrated_no_feedback_by_device",
+      "shared": [
+        "visVarSlope",
+        "retention",
+        "lr"
+      ],
+      "deviceSpecific": [
+        "propVar"
+      ]
+    }
+  },
+  "useBaselineMotorVarCalibration": true,
+  "motorVarCalibrationCondition": "NoFeedbackBaseline",
+  "motorVarCalibrationValueCol": "recentred_hand_angle",
+  "motorVarCalibrationAbsAngleClipDeg": 60.0,
+  "motorVarCalibrationGroupCols": [
+    "ppid",
+    "target_angles_degrees",
+    "clamp_magnitude"
+  ],
+  "motorVarCalibrationScope": "subset",
+  "motorVarCalibrationAggregation": "median_group_variance",
+  "jointSubsetSlug": "joint_devices",
+  "deviceSlugs": [
+    "mouse",
+    "trackpad"
+  ],
+  "fitConfig": {
+    "fit_mode": "point",
+    "objective_name": "negll",
+    "nRestarts": 20,
+    "nPolish": 10,
+    "maxfevals": 6000,
+    "num_cores": 1,
+    "restart_num_cores": 10,
+    "seed": 42
+  }
+}

@@ -1,0 +1,16 @@
+plotSubsetSlug,plotSubsetLabel,model,parameter,displayParameter,displayScale,n,correlation,bias,mae,rmse
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,propVar_mouse,"$\sigma_{p,\mathrm{mouse}}$",sd,20,0.7119456177464861,-0.06645862406231302,1.928776733534712,3.4858857183369016
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,propVar_trackpad,"$\sigma_{p,\mathrm{trackpad}}$",sd,20,0.7516923887589094,-0.17882416881803592,2.6908565259415305,4.157645176885604
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,visVarSlope,$\sigma_{v\beta}$,raw,20,0.9482439081416294,-0.009727529708934807,0.018749904913742187,0.036072690216006335
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,retention,$A$,raw,20,0.9815508964078564,0.00019623156853157964,0.0017254365134920513,0.002844371294445006
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,lr,$B$,raw,20,0.9991856851178149,-0.0009575173075445401,0.0030866567646186177,0.0037912975341722484
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,senseVar_mouse,"$\sigma_{s,\mathrm{mouse}}$",sd,20,0.9640328361465681,1.7861883902820572,1.9502860651331715,6.433753187014696
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,senseVar_trackpad,"$\sigma_{s,\mathrm{trackpad}}$",sd,20,0.9831554935194385,-0.06450393719800811,0.9877880748280636,2.6788313205073075
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,c,$c$,raw,20,0.9491886617870188,-0.02048574099641569,0.045303671857446395,0.0646570482852855
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,retention,$A$,raw,20,0.5000383909032194,-0.00422908346589263,0.005113070525516289,0.014205531617600131
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,lr,$B$,raw,20,0.04957066294607614,-0.11179076919319075,0.18838932421069526,0.2996627930132671
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,propVar_mouse,"$\sigma_{p,\mathrm{mouse}}$",sd,20,0.612335206234359,2.603513407037761,3.2746460471384324,6.223783833456402
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,propVar_trackpad,"$\sigma_{p,\mathrm{trackpad}}$",sd,20,0.8887903265644419,1.3513296021941854,1.6417436108076344,3.2749461969370284
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,visVarSlope,$\sigma_{v\beta}$,raw,20,0.9963680304077667,0.0016391524196738114,0.005746600156930364,0.011931963377218264
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,retention,$A$,raw,20,0.9915411567503225,-6.555967916084815e-05,0.0011674969471898444,0.001867230804607011
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,lr,$B$,raw,20,0.9979974651234378,-0.00017862633818484884,0.0031798716782704857,0.005151160802229907

@@ -1,0 +1,10 @@
+plotSubsetSlug,plotSubsetLabel,generatingModel,selectedModel,count,selectionProportion
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,MeanTimeseriesBaseBCC,20,1.0
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,MeanTimeseriesCausalInf,0,0.0
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesBaseBCC,MeanTimeseriesVectorBCC,0,0.0
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,MeanTimeseriesBaseBCC,0,0.0
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,MeanTimeseriesCausalInf,20,1.0
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesCausalInf,MeanTimeseriesVectorBCC,0,0.0
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,MeanTimeseriesBaseBCC,0,0.0
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,MeanTimeseriesCausalInf,0,0.0
+joint_devices,Mouse + Trackpad joint,MeanTimeseriesVectorBCC,MeanTimeseriesVectorBCC,20,1.0

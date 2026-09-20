@@ -1,0 +1,3 @@
+subsetSlug,subsetLabel,pointerDevice,calibrationScope,clampMagnitude,fixedMotorVar,nBaselineRows,nParticipants,nVarianceGroups,medianGroupN,meanGroupVariance,medianGroupVariance,q25GroupVariance,q75GroupVariance,absAngleClipDeg,groupCols,valueCol,condition,aggregation
+mouse,Mouse,Mouse,subset,,81.42877507299032,10842,280,1106,10.0,132.42734203547724,81.42877507299032,43.965046901881195,159.33389675290897,60.0,"ppid,target_angles_degrees,clamp_magnitude",recentred_hand_angle,NoFeedbackBaseline,median_group_variance
+trackpad,Trackpad,Trackpad,subset,,43.75327994968318,7498,196,763,10.0,62.2412652097559,43.75327994968318,25.352706443519757,71.66575504385787,60.0,"ppid,target_angles_degrees,clamp_magnitude",recentred_hand_angle,NoFeedbackBaseline,median_group_variance

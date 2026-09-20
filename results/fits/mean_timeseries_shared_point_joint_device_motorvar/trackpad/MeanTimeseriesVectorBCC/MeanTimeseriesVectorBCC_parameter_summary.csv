@@ -1,0 +1,9 @@
+scope,parameter,mean,sd,fixed,datasetSlug,datasetLabel
+device_specific,propVar,340.2161461624544,0.0,False,mouse,Mouse
+device_specific,propVar,121.82691508802334,0.0,False,trackpad,Trackpad
+shared,visVarSlope,0.1867866886814298,0.0,False,,Shared
+shared,retention,0.983539585463393,0.0,False,,Shared
+shared,lr,0.08132212999965625,0.0,False,,Shared
+fixed,visVarInt,1.853,0.0,True,,Shared
+fixed_by_subset,motorVar,81.42877507299032,0.0,True,mouse,Mouse
+fixed_by_subset,motorVar,43.75327994968318,0.0,True,trackpad,Trackpad

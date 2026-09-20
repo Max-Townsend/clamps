@@ -1,0 +1,96 @@
+{
+  "seed": 42,
+  "nCores": 10,
+  "parallelism": "restart searches only; objective evaluations use one core",
+  "parameterization": "joint_device_fixed_motorVar",
+  "useBaselineMotorVarCalibration": true,
+  "motorVarCalibrationCondition": "NoFeedbackBaseline",
+  "motorVarCalibrationValueCol": "recentred_hand_angle",
+  "motorVarCalibrationAbsAngleClipDeg": 60.0,
+  "motorVarCalibrationGroupCols": [
+    "ppid",
+    "target_angles_degrees",
+    "clamp_magnitude"
+  ],
+  "motorVarCalibrationScope": "subset",
+  "motorVarCalibrationAggregation": "median_group_variance",
+  "vectorRetentionLowerBound": 0.5,
+  "sourceFitCollection": "meanTimeseriesFits\\mean_timeseries_shared_point_joint_device_motorvar",
+  "recoveryCollectionName": "mean_timeseries_shared_point_recovery_joint_device_motorvar",
+  "subsetSlugs": [
+    "joint_devices"
+  ],
+  "deviceSubsetSlugs": [
+    "mouse",
+    "trackpad"
+  ],
+  "plotPoolDeviceSubsets": false,
+  "plotPoolSourceSubsets": [],
+  "plotPoolSubsetSlug": "joint_devices",
+  "plotPoolSubsetLabel": "Mouse + Trackpad joint",
+  "parameterRangeMode": "local",
+  "logScaleFactor": 4.0,
+  "linearHalfWidthFraction": 0.2,
+  "retentionHalfWidth": 0.03,
+  "addGaussianNoise": true,
+  "runPreset": "publication",
+  "nSimulationsPerGeneratingModel": 20,
+  "fitConfig": {
+    "nRestarts": 20,
+    "nPolish": 2,
+    "maxfevals": 6000,
+    "num_cores": 1,
+    "restart_num_cores": 10
+  },
+  "motorVarCalibration": [
+    {
+      "subsetSlug": "mouse",
+      "subsetLabel": "Mouse",
+      "pointerDevice": "Mouse",
+      "calibrationScope": "subset",
+      "clampMagnitude": NaN,
+      "fixedMotorVar": 81.42877507299032,
+      "nBaselineRows": 10842,
+      "nParticipants": 280,
+      "nVarianceGroups": 1106,
+      "medianGroupN": 10.0,
+      "meanGroupVariance": 132.42734203547724,
+      "medianGroupVariance": 81.42877507299032,
+      "q25GroupVariance": 43.9650469018812,
+      "q75GroupVariance": 159.33389675290897,
+      "absAngleClipDeg": 60.0,
+      "groupCols": "ppid,target_angles_degrees,clamp_magnitude",
+      "valueCol": "recentred_hand_angle",
+      "condition": "NoFeedbackBaseline",
+      "aggregation": "median_group_variance"
+    },
+    {
+      "subsetSlug": "trackpad",
+      "subsetLabel": "Trackpad",
+      "pointerDevice": "Trackpad",
+      "calibrationScope": "subset",
+      "clampMagnitude": NaN,
+      "fixedMotorVar": 43.75327994968318,
+      "nBaselineRows": 7498,
+      "nParticipants": 196,
+      "nVarianceGroups": 763,
+      "medianGroupN": 10.0,
+      "meanGroupVariance": 62.2412652097559,
+      "medianGroupVariance": 43.75327994968318,
+      "q25GroupVariance": 25.35270644351976,
+      "q75GroupVariance": 71.66575504385787,
+      "absAngleClipDeg": 60.0,
+      "groupCols": "ppid,target_angles_degrees,clamp_magnitude",
+      "valueCol": "recentred_hand_angle",
+      "condition": "NoFeedbackBaseline",
+      "aggregation": "median_group_variance"
+    }
+  ],
+  "activeModelParameterCounts": {
+    "joint_devices": {
+      "MeanTimeseriesBaseBCC": 5,
+      "MeanTimeseriesCausalInf": 5,
+      "MeanTimeseriesVectorBCC": 5
+    }
+  }
+}

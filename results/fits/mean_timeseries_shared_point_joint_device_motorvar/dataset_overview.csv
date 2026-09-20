@@ -1,0 +1,3 @@
+subsetLabel,subsetSlug,pointer_device,n_participants,n_summary_rows,n_clamps,min_cycle_wrt_clamp,max_cycle_wrt_clamp
+Mouse,mouse,Mouse,282,10400,40,-10,249
+Trackpad,trackpad,Trackpad,202,10400,40,-10,249

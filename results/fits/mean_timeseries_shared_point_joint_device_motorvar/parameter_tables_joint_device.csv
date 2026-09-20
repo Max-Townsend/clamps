@@ -1,0 +1,22 @@
+scope,parameter,mean,sd,fixed,datasetSlug,datasetLabel,subsetLabel,subsetSlug,model,model_name
+device_specific,propVar,1000.0,0.0,False,mouse,Mouse,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: BaseBCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesBaseBCC
+device_specific,propVar,681.3484088870764,0.0,False,trackpad,Trackpad,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: BaseBCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesBaseBCC
+shared,visVarSlope,0.4412303014632289,0.0,False,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: BaseBCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesBaseBCC
+shared,retention,0.9781164434895512,0.0,False,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: BaseBCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesBaseBCC
+shared,lr,0.11692589720380088,0.0,False,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: BaseBCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesBaseBCC
+fixed,visVarInt,1.853,0.0,True,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: BaseBCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesBaseBCC
+fixed_by_subset,motorVar,81.42877507299032,0.0,True,mouse,Mouse,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: BaseBCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesBaseBCC
+fixed_by_subset,motorVar,43.75327994968318,0.0,True,trackpad,Trackpad,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: BaseBCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesBaseBCC
+device_specific,senseVar,2254.340386968759,0.0,False,mouse,Mouse,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Causal inference (joint device, shared dynamics)",MeanTimeseriesCausalInf
+device_specific,senseVar,1330.959952475392,0.0,False,trackpad,Trackpad,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Causal inference (joint device, shared dynamics)",MeanTimeseriesCausalInf
+shared,c,0.21826760066854184,0.0,False,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Causal inference (joint device, shared dynamics)",MeanTimeseriesCausalInf
+shared,retention,0.9658693357038292,0.0,False,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Causal inference (joint device, shared dynamics)",MeanTimeseriesCausalInf
+shared,lr,1.0,0.0,False,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Causal inference (joint device, shared dynamics)",MeanTimeseriesCausalInf
+device_specific,propVar,340.2161461624544,0.0,False,mouse,Mouse,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Vector BCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesVectorBCC
+device_specific,propVar,121.82691508802334,0.0,False,trackpad,Trackpad,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Vector BCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesVectorBCC
+shared,visVarSlope,0.1867866886814298,0.0,False,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Vector BCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesVectorBCC
+shared,retention,0.983539585463393,0.0,False,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Vector BCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesVectorBCC
+shared,lr,0.08132212999965625,0.0,False,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Vector BCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesVectorBCC
+fixed,visVarInt,1.853,0.0,True,,Shared,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Vector BCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesVectorBCC
+fixed_by_subset,motorVar,81.42877507299032,0.0,True,mouse,Mouse,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Vector BCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesVectorBCC
+fixed_by_subset,motorVar,43.75327994968318,0.0,True,trackpad,Trackpad,Mouse + Trackpad joint,joint_devices,"Mouse + Trackpad joint: Vector BCC (joint device, shared dynamics, calibrated motorVar)",MeanTimeseriesVectorBCC

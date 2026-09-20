@@ -1,0 +1,7 @@
+generatingModel,subsetSlug,stat,MeanTimeseriesBaseBCC,MeanTimeseriesCausalInf,MeanTimeseriesVectorBCC
+MeanTimeseriesBaseBCC,joint_devices,count,20.0,0.0,0.0
+MeanTimeseriesCausalInf,joint_devices,count,0.0,20.0,0.0
+MeanTimeseriesVectorBCC,joint_devices,count,0.0,0.0,20.0
+MeanTimeseriesBaseBCC,joint_devices,proportion,1.0,0.0,0.0
+MeanTimeseriesCausalInf,joint_devices,proportion,0.0,1.0,0.0
+MeanTimeseriesVectorBCC,joint_devices,proportion,0.0,0.0,1.0
