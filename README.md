@@ -1,88 +1,51 @@
-# Chapter 4: clamp analyses
+# Modelling implicit sensorimotor adaptation
 
-This is the working code and data for **Implicit sensorimotor adaptation to clamped azimuthal error operates over two-dimensional perceptual error**. It reproduces Figures 4.1–4.4, Figures S4.1–S4.2, the parameter table, and the statistical analyses from one Python package.
+**Testing how people adapt their movements to visual errors, using behavioural data and computational models.**
 
-## Data availability
+In a clamped-feedback experiment, the cursor follows a prescribed direction regardless of the participant's movement direction. This project investigates whether implicit adaptation is better explained by perceptual error in two dimensions than by angular error alone.
 
-For the full dataset, including the raw movement-tracker data, contact **Max Townsend** at [max.o.b.townsend@gmail.com](mailto:max.o.b.townsend@gmail.com).
+Research code and data from **Max Townsend's PhD in computational cognitive science**, supporting *Implicit sensorimotor adaptation operates over multidimensional perceptual error* (**manuscript in preparation**).
 
-The raw tracker file (`data/raw/trackers.csv`, approximately 8.85 GB) is excluded from Git and remains available locally. Standard figure and statistical reproduction uses the formatted dataset and retained tracker-derived caches. Re-extracting movement bouts with `trackers --rebuild-cache` requires the full tracker file; place the supplied file at `data/raw/trackers.csv` before running that command.
+[Request the manuscript](mailto:max.o.b.townsend@gmail.com?subject=Request%3A%20Implicit%20sensorimotor%20adaptation%20operates%20over%20multidimensional%20perceptual%20error) · [Browse the figures](results/figures/) · [Contact](mailto:max.o.b.townsend@gmail.com)
 
-### Bundled data
+## What is included
 
-The five other large input files are distributed as lossless gzip archives in `data/archives/`. The CSV archives are about 27 MB and 31 MB. The MATLAB archives use numbered parts no larger than **40 MiB**, below [GitHub's 100 MiB per-file limit](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). Git LFS is not required for these bundles.
+- **Behavioural analysis at scale:** 486 participants, 524,649 trials and 40 clamp magnitudes; 484 participants have device metadata for mouse/trackpad comparisons.
+- **Competing models:** scalar Bayesian cue combination (BCC), causal inference and Vector-BCC, with shared learning dynamics and device-specific uncertainty parameters.
+- **Model evaluation:** fitting, model and parameter recovery, movement-trajectory analysis, statistical summaries and six reproducible figures.
 
-Analysis commands automatically restore any missing inputs they need. To restore all five files explicitly, using only Python's standard library:
+**Stack:** Python · NumPy · pandas · SciPy · statsmodels · Matplotlib · joblib.
 
-```powershell
-py -3.13 -m clamp_analysis restore-data
-```
+## Explore the code
 
-Existing local files are preserved. The reconstructed CSV/MAT files and raw trackers are ignored by Git; the compact archives are included instead. See [the archive guide](docs/data_archives.md) for details.
-
-## Start here
-
-From this folder, using Python 3.13:
-
-```powershell
-py -3.13 -m pip install -r requirements.txt
-py -3.13 -m clamp_analysis reproduce
-```
-
-The reproduction command recomputes participant summaries and statistics and draws every numbered figure. It uses the retained thesis fits and recovery simulations; it does not silently launch hours of optimization. Figures are saved as PNG, SVG and PDF in `results/figures/`.
-
-To redraw the figures alone:
-
-```powershell
-py -3.13 -m clamp_analysis figures
-```
-
-## Where things live
-
-| Folder | Contents |
+| Start here | What to look for |
 |---|---|
-| `clamp_analysis/behavior/` | Raw-trial preparation, analysis windows, participant summaries and baseline biases |
-| `clamp_analysis/statistics/` | ANOVAs, clustered models, planned comparisons and bootstrap intervals |
-| `clamp_analysis/models/` | Scalar BCC, causal inference, Vector-BCC, joint-device parameters and fitting machinery |
-| `clamp_analysis/kinematics/` | First movement-bout extraction, quality checks, radial/tangential updates and model calibration |
-| `clamp_analysis/figures/` | Reusable plotting functions and numbered thesis figure layouts |
-| `clamp_analysis/workflows/` | Joint-device model fitting and simulation-based recovery workflows |
-| `clamp_analysis/literature/` | Preparation of the literature data for Figure 4.1 |
-| `data/raw/` | Original trials, trackers, participant list, device details and settings |
-| `data/processed/` | The complete formatted thesis dataset |
-| `data/archives/` | Compressed bundles for restoring the five large CSV/MAT inputs |
-| `data/literature/` | Included literature source data, provenance and derived summaries |
-| `results/` | Regenerated figures/tables and retained fits, recovery results and tracker caches |
-| `docs/` | Figure-to-code map, code reading guide and data restoration instructions |
+| [Behavioural pipeline](clamp_analysis/behavior/pipeline.py) | Trial data to participant summaries and analysis tables |
+| [Learning models](clamp_analysis/models/state_space.py) | Three accounts of how perceptual error drives adaptation |
+| [Joint-device models](clamp_analysis/models/joint_device.py) | Shared dynamics and mouse/trackpad uncertainty |
+| [Recovery workflow](clamp_analysis/workflows/recovery.py) | Simulating and refitting data to assess model distinguishability |
 
-All filesystem locations are defined in `clamp_analysis/paths.py`. For an installed package, `CLAMP_PROJECT_ROOT` can point to another checkout. `CLAMP_RESULTS_DIR` can direct regenerated outputs elsewhere; that directory must also contain the saved fit/recovery inputs when making figures.
+See the [code reading guide](docs/reading_guide.md) and [figure-to-code map](docs/chapter4_map.md) for more detail. Outputs retain the thesis Chapter 4 numbering.
 
-## Rebuild the underlying analyses
+## Reproduce the results
+
+With **Python 3.13**, clone the repository and run from its root in a virtual environment:
 
 ```powershell
-# Rebuild the formatted dataset from raw trials and the original participant list.
-py -3.13 -m clamp_analysis preprocess
-
-# Rebuild radial model calibration using the retained first-bout tracker cache.
-py -3.13 -m clamp_analysis trackers
-
-# Re-extract the first bouts from the complete 8.85 GB tracker file as well.
-py -3.13 -m clamp_analysis trackers --rebuild-cache
-
-# Recreate the literature summaries from the included original CSV/MAT files.
-py -3.13 -m clamp_analysis literature
-
-# Refit the three joint-device models. Outputs go to an explicit new location.
-py -3.13 -m clamp_analysis fit --output results/refits --cores 4
-
-# Rerun the full 60-dataset, 180-fit model/parameter recovery analysis.
-py -3.13 -m clamp_analysis recover --output results/recovery_rerun --cores 4
+git clone https://github.com/Max-Townsend/clamps.git
+cd clamps
+py -3.13 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m clamp_analysis reproduce
 ```
 
-Fitting and recovery defaults use the publication settings. Lower restart/evaluation counts are available for pipeline checks, but their output should not replace the thesis fits. New fits are intentionally written separately; the default figure workflow continues to use the named thesis collection in `paths.py` until you explicitly select a replacement.
+On macOS/Linux, create the environment with `python3.13 -m venv .venv` and activate it with `source .venv/bin/activate`.
 
-## Scientific conventions and provenance
+This regenerates summaries, statistics and figures using the saved fits. Required data archives unpack automatically; Git LFS is not needed. Outputs are written to `results/`, with figures in PNG, SVG and PDF. Full refitting is a separate, expensive workflow: see [reproduction instructions](docs/REPRODUCING.md).
 
-The main dataset contains **486 participants, 524,649 trials and 40 clamp magnitudes**. Two participants lack device metadata; device-specific analyses use 484 participants. Main behavioral analyses use task-aligned hand angles without baseline correction.
+## Paper and data access
 
-Read [the chapter map](docs/chapter4_map.md) for exact figure dependencies, [the code reading guide](docs/reading_guide.md) for the analysis windows, scientific conventions and where to make changes.
+Townsend, M., Warburton, M., Campagnoli, C., Mon-Williams, M., Mushtaq, F., & Morehead, J. R. **Implicit sensorimotor adaptation operates over multidimensional perceptual error.** Manuscript in preparation; available on request.
+
+The full raw movement-tracker file (approximately **8.85 GB**) is available on request. Standard reproduction uses bundled data and tracker-derived caches. For the manuscript, full data or questions, contact [max.o.b.townsend@gmail.com](mailto:max.o.b.townsend@gmail.com).
