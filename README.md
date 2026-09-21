@@ -1,35 +1,12 @@
-# Modelling implicit sensorimotor adaptation
+# Implicit sensorimotor adaptation
 
-**Testing how people adapt their movements to visual errors, using behavioural data and computational models.**
+Python code and data for studying how people adapt their movements to visual feedback. In these experiments, the cursor follows a fixed direction relative to the target, regardless of the participant's movement direction. The question is whether adaptation depends on perceptual error in two dimensions rather than angular error alone.
 
-In a clamped-feedback experiment, the cursor follows a prescribed direction regardless of the participant's movement direction. This project investigates whether implicit adaptation is better explained by perceptual error in two dimensions than by angular error alone.
+The dataset contains 486 participants, 524,649 trials and 40 clamp magnitudes. The analyses compare three models: scalar Bayesian cue combination (BCC), causal inference and Vector-BCC. They include mouse/trackpad comparisons, movement trajectories, and model and parameter recovery.
 
-Research code and data from **Max Townsend's PhD in computational cognitive science**, supporting *Implicit sensorimotor adaptation operates over multidimensional perceptual error* (**manuscript in preparation**).
+## Run the analyses
 
-[Request the manuscript](mailto:max.o.b.townsend@gmail.com?subject=Request%3A%20Implicit%20sensorimotor%20adaptation%20operates%20over%20multidimensional%20perceptual%20error) · [Browse the figures](results/figures/) · [Contact](mailto:max.o.b.townsend@gmail.com)
-
-## What is included
-
-- **Behavioural analysis at scale:** 486 participants, 524,649 trials and 40 clamp magnitudes; 484 participants have device metadata for mouse/trackpad comparisons.
-- **Competing models:** scalar Bayesian cue combination (BCC), causal inference and Vector-BCC, with shared learning dynamics and device-specific uncertainty parameters.
-- **Model evaluation:** fitting, model and parameter recovery, movement-trajectory analysis, statistical summaries and six reproducible figures.
-
-**Stack:** Python · NumPy · pandas · SciPy · statsmodels · Matplotlib · joblib.
-
-## Explore the code
-
-| Start here | What to look for |
-|---|---|
-| [Behavioural pipeline](clamp_analysis/behavior/pipeline.py) | Trial data to participant summaries and analysis tables |
-| [Learning models](clamp_analysis/models/state_space.py) | Three accounts of how perceptual error drives adaptation |
-| [Joint-device models](clamp_analysis/models/joint_device.py) | Shared dynamics and mouse/trackpad uncertainty |
-| [Recovery workflow](clamp_analysis/workflows/recovery.py) | Simulating and refitting data to assess model distinguishability |
-
-See the [code reading guide](docs/reading_guide.md) and [figure-to-code map](docs/chapter4_map.md) for more detail. Outputs retain the thesis Chapter 4 numbering.
-
-## Reproduce the results
-
-With **Python 3.13**, clone the repository and run from its root in a virtual environment:
+Use **Python 3.13**. In PowerShell:
 
 ```powershell
 git clone https://github.com/Max-Townsend/clamps.git
@@ -42,10 +19,20 @@ python -m clamp_analysis reproduce
 
 On macOS/Linux, create the environment with `python3.13 -m venv .venv` and activate it with `source .venv/bin/activate`.
 
-This regenerates summaries, statistics and figures using the saved fits. Required data archives unpack automatically; Git LFS is not needed. Outputs are written to `results/`, with figures in PNG, SVG and PDF. Full refitting is a separate, expensive workflow: see [reproduction instructions](docs/REPRODUCING.md).
+This uses the saved fits to regenerate summaries, statistics and figures in `results/`. Data archives unpack automatically; Git LFS is not needed. You can also [browse the existing figures](results/figures/) without running anything.
 
-## Paper and data access
+See the [reproduction guide](docs/REPRODUCING.md) for refitting and other commands. The full raw movement-tracker file (8.85 GB) is available on request; normal reproduction uses the included tracker-derived caches.
 
-Townsend, M., Warburton, M., Campagnoli, C., Mon-Williams, M., Mushtaq, F., & Morehead, J. R. **Implicit sensorimotor adaptation operates over multidimensional perceptual error.** Manuscript in preparation; available on request.
+## Code
 
-The full raw movement-tracker file (approximately **8.85 GB**) is available on request. Standard reproduction uses bundled data and tracker-derived caches. For the manuscript, full data or questions, contact [max.o.b.townsend@gmail.com](mailto:max.o.b.townsend@gmail.com).
+- [Behavioural analysis](clamp_analysis/behavior/pipeline.py)
+- [Model equations](clamp_analysis/models/state_space.py) and [mouse/trackpad parameters](clamp_analysis/models/joint_device.py)
+- [Model and parameter recovery](clamp_analysis/workflows/recovery.py)
+
+The [reading guide](docs/reading_guide.md) explains the analysis choices. The [figure map](docs/chapter4_map.md) connects outputs to code; figure numbers follow Chapter 4 of my PhD thesis.
+
+## Paper
+
+Townsend, M., Warburton, M., Campagnoli, C., Mon-Williams, M., Mushtaq, F., & Morehead, J. R. *Implicit sensorimotor adaptation operates over multidimensional perceptual error.* In preparation. [Request the manuscript](mailto:max.o.b.townsend@gmail.com?subject=Request%3A%20Implicit%20sensorimotor%20adaptation%20operates%20over%20multidimensional%20perceptual%20error).
+
+For the paper, full data or questions: Max Townsend · [max.o.b.townsend@gmail.com](mailto:max.o.b.townsend@gmail.com)
