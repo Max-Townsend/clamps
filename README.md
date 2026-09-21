@@ -1,8 +1,8 @@
 # Implicit sensorimotor adaptation
 
-Python code and data for studying how people adapt their movements to visual feedback. In these experiments, the cursor follows a fixed direction relative to the target, regardless of the participant's movement direction. The question is whether adaptation depends on perceptual error in two dimensions rather than angular error alone.
+Python code and data for studying how people adapt their movements to visual feedback. In these experiments, the cursor follows a fixed direction relative to the target, regardless of the participant's movement direction. How does error size affect learning, and how is error represented?
 
-The dataset contains 486 participants, 524,649 trials and 40 clamp magnitudes. The analyses compare three models: scalar Bayesian cue combination (BCC), causal inference and Vector-BCC. They include mouse/trackpad comparisons, movement trajectories, and model and parameter recovery.
+The dataset contains 486 participants and 40 clamp magnitudes. The analyses compare three models: scalar Bayesian cue combination (BCC), causal inference and Vector-BCC. They include mouse/trackpad comparisons, movement trajectories, and model and parameter recovery.
 
 ## Run the analyses
 
